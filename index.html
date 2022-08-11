@@ -134,7 +134,12 @@
             (e.children[0]).children[0].addEventListener("mouseleave", (event) => {
                 e.children[1].style.background = `url(./img/cruuunchify-cover.jpg) center/100% no-repeat fixed`;
             });
-            
+            e.children[1].addEventListener("mouseenter", (event) => {
+                e.children[1].style.background = `url(./img/cruuunchify-cover.jpg) center/110% no-repeat fixed`;
+            });
+            e.children[1].addEventListener("mouseleave", (event) => {
+                e.children[1].style.background = `url(./img/cruuunchify-cover.jpg) center/100% no-repeat fixed`;
+            });
 
         });
 
