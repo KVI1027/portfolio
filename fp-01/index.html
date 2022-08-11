@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KVI</title>
+    <link rel="icon" href="favicon.png" sizes="32x32" type="image/png" />
+    <script src="https://kit.fontawesome.com/922a1ff5f8.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        @import url(./css.css);
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="nav_logo">KVI</h1>
+        <ul class="nav_navgtion">
+            <li>Work</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <section class="section_1">
+
+        <div class="title">
+            <p class="title_p move" data-speed="0.6">Front-end</p>
+            <p class="title_p2 move" data-speed="0.6">Developer</p>
+        </div>
+        <div class="img_1 " id="mask">
+            <div id="unblock"></div>
+        </div>
+        <div class="intro_name">
+            <div class="intro">
+                <i class="fa-solid fa-arrow-down move" data-speed="0.3"></i>
+                <p class="intro_1 move" data-speed="-0.1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium commodi molestiae
+                    dolorum doloremque </p>
+            </div>
+            <div class="name">
+                <p class="name_L move" data-speed="-0.3">Lin</p>
+                <p class="name_KQ move" data-speed="-0.3">Kai Qiang</p>
+
+            </div>
+        </div>
+    </section>
+    <section class="section_2">
+        <div class="page move" data-speed="0.03">01-About</div>
+        <div class="about">
+            <p class="about_content move" data-speed="0.04">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Repellat quibusdam quia
+                unde, eligendi dignissimos alias ipsam, cum dolore dolorem sed delectus iure officiis sequi ab odio modi
+                omnis optio ipsum.</p>
+            <div class="about_content_1 move" data-speed="0.08">
+                <p class="about_psnlty">ewwqewqewq rtwqr wq rwqqw wqr wqr rqw </p>
+                <p class="about_dsc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis provident possimus
+                    quo sint beatae blanditiis, reprehenderit atque laudantium, voluptatum, praesentium illo tempore
+                    quaerat quisquam mollitia! Delectus illo odit culpa, placeat modi porro dolores distinctio ipsam,
+                    vel praesentium ratione ab, officia vitae eveniet dolorem exercitationem enim possimus voluptate
+                    nulla animi. Temporibus!</p>
+            </div>
+
+        </div>
+    </section>
+    <section class="section_3">
+        <div class="work_title">
+            <div class="page">02-Work</div>
+            <p class="recent">Recent<br>projects</p>
+        </div>
+        <div class="project">
+            <div class="project_info">
+                <h1 class="project_name">
+                    <p class="project_topic">Spirited</p>
+                    <p class="project_dcr" style="text-decoration:none;">classic american cookie store project</p>
+                </h1>
+
+            </div>
+            <div class="project_img " data-speed="0.1">
+
+            </div>
+
+        </div>
+        <div class="project">
+            <div class="project_info">
+                <h1 class="project_name">
+                    <p class="project_topic">Microsoft</p>
+                    <p class="project_dcr" style="text-decoration:none;">Microsoft official website layout practice</p>
+                </h1>
+
+            </div>
+            <div class="project_img ">
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="section_4">
+        <div class="contact_title">
+            <div class="page">03-contact</div>
+            <p class="wanna">wanna<br>work together?</p>
+            <p class="sendmss">send me <br>a message</p>
+        </div>
+        <div class="email">
+            <a href="">a0981543866</br>@gmail.com</a>
+        </div>
+        <div class="footer">
+            <a href="https://www.flaticon.com/free-icons/letter-k" title="letter k icons">Letter k icons created by
+                riajulislam - Flaticon</a>
+            <p class="sign">Developed by<br> Lin Kai Qiang</p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <script>
+        const project = document.querySelectorAll(".project")
+
+
+        project.forEach(e => {
+            console.log((e.children[1]));
+            (e.children[0]).children[0].addEventListener("mouseenter", (event) => {
+                e.children[1].style.background = `url(./img/cruuunchify-cover.jpg) center/110% no-repeat fixed`;
+            });
+            (e.children[0]).children[0].addEventListener("mouseleave", (event) => {
+                e.children[1].style.background = `url(./img/cruuunchify-cover.jpg) center/100% no-repeat fixed`;
+            });
+            
+
+        });
+
+
+        window.addEventListener('scroll', () => {
+            const scrollPositionY = window.pageYOffset;
+            const scrollparallax = document.querySelectorAll('.move');
+
+
+            scrollparallax.forEach(e => {
+                const move_speed = Number(e.dataset.speed);
+                e.style.transform = `translateY(${scrollPositionY * move_speed}px)`;
+            });
+
+
+        });
+        const img = document.querySelectorAll('.move');
+
+
+        console.log(document.getElementById("mask"));
+        dragElement(document.getElementById("mask"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+            // otherwise, move the DIV from anywhere inside the DIV:
+            elmnt.onmousedown = dragMouseDown;
+
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+
+                pos3 = e.clientX;
+
+                // set the element's new position:
+                const movement = (elmnt.offsetLeft - pos1);
+
+                console.log(movement);
+                if (movement < 50) {
+                    movement = 50
+                } else if (movement > 755) {
+                    movement = 755
+                }
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+                elmnt.style.left >= 0;
+            }
+
+            function closeDragElement() {
+                // stop moving when mouse button is released:
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+</body>
+
+</html>
