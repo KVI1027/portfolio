@@ -8,9 +8,26 @@ html {
   scroll-behavior: smooth;
 }
 
+.jarallax {
+  position: relative;
+  z-index: 0;
+}
+.jarallax:hover .jarallax-img {
+  transform: scale(1.1);
+}
+.jarallax .jarallax-img {
+  z-index: -1;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+a {
+  color: black;
+}
+
 body {
   position: relative;
   font-family: "Kanit", sans-serif;
+  font-family: "Noto Sans TC", sans-serif !important;
   background-color: rgb(236, 231, 225);
 }
 body .navbar {
@@ -60,29 +77,29 @@ body .section_1 .title {
   flex-flow: column wrap;
   font-size: 160px;
   margin-bottom: 40px;
-  line-height: 120px;
-  height: 240px;
+  line-height: 135px;
+  height: 270px;
   text-align: start;
 }
 @media screen and (max-width: 1380px) {
   body .section_1 .title {
     font-size: 140px;
-    line-height: 100px;
-    height: 200px;
+    line-height: 120px;
+    height: 240px;
   }
 }
 @media screen and (max-width: 1228px) {
   body .section_1 .title {
     font-size: 120px;
-    line-height: 80px;
-    height: 160px;
+    line-height: 100px;
+    height: 200px;
   }
 }
 @media screen and (max-width: 1005px) {
   body .section_1 .title {
     height: 284px;
     font-size: 85px;
-    line-height: 60px;
+    line-height: 70px;
     justify-content: flex-end;
     font-weight: 300;
   }
@@ -92,17 +109,22 @@ body .section_1 .img_1#mask {
   height: 300px;
   overflow: hidden;
   position: absolute;
-  top: 43% vh;
+  top: 420px;
+}
+@media screen and (max-width: 1380px) {
+  body .section_1 .img_1#mask {
+    top: 380px;
+  }
 }
 @media screen and (max-width: 1228px) {
   body .section_1 .img_1#mask {
-    height: 200px;
+    height: 300px;
   }
 }
 @media screen and (max-width: 1005px) {
   body .section_1 .img_1#mask {
     height: 300px;
-    top: 435px;
+    top: 420px;
   }
 }
 body .section_1 .img_1 #unblock {
@@ -111,31 +133,47 @@ body .section_1 .img_1 #unblock {
   left: 0px;
   z-index: 999;
   width: 100%;
-  height: 100%;
+  height: 300px;
   overflow: hidden;
-  background-image: url(./img/2ewq.jpeg);
+  background-image: url(./img/monk.jpeg);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: left;
-  background-size: 90%;
+  background-position: 0% 63%;
+  background-size: 110%;
   width: 100%;
-  height: 300px;
   cursor: -webkit-grabbing;
   cursor: grabbing;
   transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 body .section_1 .img_1 #unblock:hover {
-  background-size: 100%;
+  background-size: 115%;
+}
+@media screen and (max-width: 1380px) {
+  body .section_1 .img_1 #unblock:hover {
+    background-size: 120%;
+  }
+}
+@media screen and (max-width: 1228px) {
+  body .section_1 .img_1 #unblock:hover {
+    background-size: 125%;
+  }
+}
+@media screen and (max-width: 1380px) {
+  body .section_1 .img_1 #unblock {
+    background-size: 115%;
+    background-position: 0% 57%;
+  }
 }
 @media screen and (max-width: 1228px) {
   body .section_1 .img_1 #unblock {
-    height: 200px;
+    height: 300px;
+    background-size: 120%;
   }
 }
 @media screen and (max-width: 1005px) {
   body .section_1 .img_1 #unblock {
     height: 300px;
-    background-position: 15% 65%;
+    background-position: 0% 60%;
   }
 }
 body .section_1 .intro_name {
@@ -143,7 +181,7 @@ body .section_1 .intro_name {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  margin-top: 375px;
+  margin-top: 335px;
 }
 @media screen and (max-width: 1005px) {
   body .section_1 .intro_name {
@@ -176,7 +214,7 @@ body .section_1 .intro_name .intro i {
   body .section_1 .intro_name .intro i {
     position: absolute;
     right: 50px;
-    top: 900px;
+    top: 890px;
   }
 }
 body .section_1 .intro_name .intro .intro_1 {
@@ -214,6 +252,7 @@ body .section_1 .intro_name .name {
     font-size: 110px;
     line-height: 90px;
     height: 180px;
+    width: 55%;
   }
 }
 @media screen and (max-width: 1005px) {
@@ -224,15 +263,14 @@ body .section_1 .intro_name .name {
     align-items: flex-start;
     font-size: 85px;
     font-weight: 300;
-    line-height: 65px;
+    line-height: 70px;
     margin-left: 25px;
   }
 }
 body .section_2 {
   margin: auto;
-  padding: 120px 3% 0% 3%;
+  padding: 120px 3% 400px 3%;
   background-color: rgb(236, 231, 225);
-  height: 1200px;
 }
 body .section_2 .page {
   font-size: 32px;
@@ -385,8 +423,8 @@ body .section_3 .project .project_info .project_name::after {
   content: "";
   position: absolute;
   left: 0;
-  transition: 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  top: 189px;
+  transition: 1.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  top: 73%;
   left: -100px;
   height: 16px;
   width: 10%;
@@ -394,24 +432,22 @@ body .section_3 .project .project_info .project_name::after {
 }
 @media screen and (max-width: 1380px) {
   body .section_3 .project .project_info .project_name::after {
-    top: 172px;
+    top: 72%;
   }
 }
 @media screen and (max-width: 1227px) {
   body .section_3 .project .project_info .project_name::after {
-    top: 144px;
-    transition: 1.8;
+    top: 70%;
   }
 }
 @media screen and (max-width: 1005px) {
   body .section_3 .project .project_info .project_name::after {
-    top: 97px;
-    transition: 2.3;
+    top: 66%;
   }
 }
 body .section_3 .project .project_info .project_name:hover::after {
   width: 10%;
-  left: 600px;
+  left: 100%;
 }
 body .section_3 .project .project_info .project_name .project_topic {
   letter-spacing: -5px;
@@ -424,11 +460,6 @@ body .section_3 .project .project_img {
   width: 50%;
   height: 1080px;
   transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  background-image: url(./img/cruuunchify-cover.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 @media screen and (max-width: 1005px) {
   body .section_3 .project .project_img {
@@ -439,15 +470,6 @@ body .section_3 .project .project_img {
     top: 260px;
   }
 }
-body .section_3 .project .project_img_2 {
-  width: 50%;
-  height: 1080px;
-  background-image: url(./img/cruuunchify-cover-1.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
 body .section_4 {
   margin: auto;
   padding: 120px 3% 0% 3%;
@@ -457,7 +479,7 @@ body .section_4 {
 body .section_4 .contact_title {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 body .section_4 .contact_title .page {
   font-size: 32px;
@@ -467,41 +489,48 @@ body .section_4 .contact_title .page {
 body .section_4 .contact_title .wanna {
   justify-self: center;
   font-size: 32px;
-  margin-left: 30%;
   line-height: 28px;
 }
 body .section_4 .contact_title .sendmss {
   justify-self: center;
   font-size: 32px;
-  margin-left: 20%;
   line-height: 28px;
+}
+@media screen and (max-width: 1005px) {
+  body .section_4 .contact_title .sendmss {
+    display: none;
+  }
 }
 body .section_4 .email {
   padding: 50px 0 50px 0;
-  width: 100%;
+  width: 1400px;
+  overflow-wrap: break-word;
+  font-size: 214px;
+}
+@media screen and (max-width: 1380px) {
+  body .section_4 .email {
+    width: 1170px;
+    font-size: 190px;
+  }
+}
+@media screen and (max-width: 1228px) {
+  body .section_4 .email {
+    width: 950px;
+    font-size: 155px;
+  }
+}
+@media screen and (max-width: 1005px) {
+  body .section_4 .email {
+    width: 630px;
+    font-size: 100px;
+    overflow-wrap: break-word;
+  }
 }
 body .section_4 .email a {
   -webkit-text-decoration: underline 10px;
           text-decoration: underline 10px;
   color: rgb(31, 31, 31);
-  font-size: 214px;
   line-height: 180px;
-}
-@media screen and (max-width: 1380px) {
-  body .section_4 .email a {
-    font-size: 190px;
-  }
-}
-@media screen and (max-width: 1228px) {
-  body .section_4 .email a {
-    font-size: 155px;
-  }
-}
-@media screen and (max-width: 1005px) {
-  body .section_4 .email a {
-    font-size: 155px;
-    overflow-wrap: break-word;
-  }
 }
 body .section_4 .footer {
   width: 100%;
