@@ -62,16 +62,35 @@ body {
             width: 25%;
             display: flex;
             flex-flow: row nowrap;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
             list-style: none;
             color: rgb(255, 255, 255);
+
+            @media screen and (max-width:1228px) {
+                width: 30%;
+            }
+
+            @media screen and (max-width:1005px) {
+                width: 280px;
+            }
+
+            @media screen and (max-width:690px) {
+                width: 200px;
+            }
+
 
             li {
                 font-size: 24px;
                 margin-left: 10px;
 
-
+                @media screen and (max-width:1005px) {
+                    font-size: 20px;
+                    margin-left: 10px;
+                }
+                @media screen and (max-width:690px) {
+                    font-size: 16px;
+                }
 
                 &:hover {
                     text-decoration: underline;
