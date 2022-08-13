@@ -17,7 +17,6 @@ html {
 }
 .jarallax .jarallax-img {
   z-index: -1;
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 a {
@@ -153,6 +152,7 @@ body .section_1 .img_1#mask {
 @media screen and (max-width: 1228px) {
   body .section_1 .img_1#mask {
     height: 300px;
+    top: 360px;
   }
 }
 @media screen and (max-width: 1005px) {
@@ -200,6 +200,8 @@ body .section_1 .img_1 #unblock:hover {
 }
 @media screen and (max-width: 1228px) {
   body .section_1 .img_1 #unblock {
+    top: -10px;
+    background-position: 55% 50%;
     height: 300px;
     background-size: 120%;
   }
@@ -558,7 +560,7 @@ body .section_3 .project .project_info .project_name .project_dcr {
 body .section_3 .project .project_img {
   width: 50%;
   height: 1080px;
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 @media screen and (max-width: 1005px) {
   body .section_3 .project .project_img {
