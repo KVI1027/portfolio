@@ -157,6 +157,7 @@ body .section_1 .img_1#mask {
 }
 @media screen and (max-width: 1005px) {
   body .section_1 .img_1#mask {
+    width: 80%;
     height: 300px;
     top: 420px;
   }
@@ -192,6 +193,11 @@ body .section_1 .img_1 #unblock:hover {
     background-size: 125%;
   }
 }
+@media screen and (max-width: 1005px) {
+  body .section_1 .img_1 #unblock:hover {
+    background-size: 1100px;
+  }
+}
 @media screen and (max-width: 1380px) {
   body .section_1 .img_1 #unblock {
     background-size: 115%;
@@ -208,8 +214,11 @@ body .section_1 .img_1 #unblock:hover {
 }
 @media screen and (max-width: 1005px) {
   body .section_1 .img_1 #unblock {
+    width: 790px;
     height: 300px;
-    background-position: 0% 60%;
+    background-image: url(./img/S__30646316.jpg);
+    background-position: 16% 78%;
+    background-size: 1000px;
   }
 }
 body .section_1 .intro_name {
