@@ -537,7 +537,6 @@ body .section_4 {
   margin: auto;
   padding: 120px 3% 0% 3%;
   background-color: rgb(236, 231, 225);
-  height: 900px;
   width: 100%;
 }
 body .section_4 .contact_title {
@@ -597,10 +596,11 @@ body .section_4 .email {
 }
 @media screen and (max-width: 690px) {
   body .section_4 .email {
-    width: 350px;
+    width: 330px;
     font-size: 50px;
     line-height: 50px;
     font-weight: 500;
+    margin: 0 0 15vh 0;
   }
 }
 body .section_4 .email a {
