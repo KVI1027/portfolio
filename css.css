@@ -323,6 +323,11 @@ body .section_2 {
   padding: 120px 3% 400px 3%;
   background-color: rgb(236, 231, 225);
 }
+@media screen and (max-width: 690px) {
+  body .section_2 {
+    padding: 0px 3% 400px 3%;
+  }
+}
 body .section_2 .page {
   font-size: 32px;
   display: inline-block;
@@ -424,6 +429,11 @@ body .section_3 {
   margin: auto;
   padding: 120px 3% 200px 3%;
   background-color: rgb(236, 231, 225);
+}
+@media screen and (max-width: 690px) {
+  body .section_3 {
+    padding: 0px 3% 400px 3%;
+  }
 }
 body .section_3 .work_title {
   display: flex;
@@ -564,6 +574,11 @@ body .section_4 {
   padding: 120px 3% 0% 3%;
   background-color: rgb(236, 231, 225);
   width: 100%;
+}
+@media screen and (max-width: 690px) {
+  body .section_4 {
+    padding: 0px 3% 400px 3%;
+  }
 }
 body .section_4 .contact_title {
   display: flex;

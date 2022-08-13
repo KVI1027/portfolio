@@ -329,7 +329,9 @@ body {
         margin: auto;
         padding: 120px 3% 400px 3%;
         background-color: rgb(236, 231, 225);
-
+        @media screen and (max-width:690px) {
+            padding: 0px 3% 400px 3%;
+        }
         .page {
             font-size: 32px;
             display: inline-block;
@@ -424,6 +426,9 @@ body {
         padding: 120px 3% 200px 3%;
         background-color: rgb(236, 231, 225);
 
+        @media screen and (max-width:690px) {
+            padding: 0px 3% 400px 3%;
+        }
         .work_title {
             display: flex;
             flex-flow: row nowrap;
@@ -567,6 +572,9 @@ body {
         padding: 120px 3% 0% 3%;
         background-color: rgb(236, 231, 225);
         width: 100%;
+        @media screen and (max-width:690px) {
+            padding: 0px 3% 400px 3%;
+        }
 
         .contact_title {
             display: flex;
