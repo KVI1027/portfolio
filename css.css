@@ -588,7 +588,7 @@ body .section_4 {
 }
 @media screen and (max-width: 690px) {
   body .section_4 {
-    padding: 0px 3% 400px 3%;
+    padding: 0px 3% 0px 3%;
   }
 }
 body .section_4 .contact_title {
