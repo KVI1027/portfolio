@@ -20,11 +20,17 @@
 
 <body>
     <nav class="navbar">
-        <h1 class="nav_logo">KVI</h1>
+        <h1 class="nav_logo"><a href="#">KVI</a></h1>
         <ul class="nav_navgtion">
-            <li>Work</li>
-            <li>About</li>
-            <li>Contact</li>
+            <a class="nav_li" href="#About">About
+                <span></span>
+            </a>
+            <a class="nav_li" href="#Work">Work
+                <span></span>
+            </a>
+            <a class="nav_li" href="#Contact">Contact
+                <span></span>
+            </a>
         </ul>
     </nav>
     <section class="section_1">
@@ -33,14 +39,15 @@
             <p class="title_p ">Front-end</p>
             <p class="title_p2 ">Developer</p>
         </div>
-        <div class="img_1 " id="mask">
+        <div class="img_1 " id="mask" data-aos="fade-up" data-aos-duration="1500"  data-aos-delay="500" data-aos-duration="3000">
+            <img src="./img/S__30646316.jpg" alt="">
             <div id="unblock"></div>
         </div>
         <div class="intro_name">
             <div class="intro">
                 <i class="fa-solid fa-arrow-down " data-aos-anchor-placement="top-bottom" data-aos="fade-down"
                     data-aos-delay="500" data-aos-duration="3000"></i>
-                <p class="intro_1 " data-speed="-0.1">勞動力發展署111年產業新尖兵試辦計畫「UI-UX與前端工程敏捷開發培訓班」
+                <p class="intro_1 " data-aos="fade-up" data-aos-duration="1500">勞動力發展署111年產業新尖兵試辦計畫「UI-UX與前端工程敏捷開發培訓班」
                 </p>
             </div>
             <div class="name" data-aos="fade-up" data-aos-duration="1500">
@@ -50,8 +57,8 @@
             </div>
         </div>
     </section>
-    <section class="section_2">
-        <div class="page " data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">01-About</div>
+    <section class="section_2" id="About">
+        <div class="page "  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">01-About</div>
         <div class="about">
             <p class="about_content " data-aos="fade-up" data-aos-duration="1500" data-aos-offset="300">
                 於今年加入了「UI-UX與前端工程敏捷開發培訓班」，在課程中學習了前端工程的技術與使用者介面/使用者體驗設計，並與夥伴們一起完成獨立的專案「Spirited
@@ -65,7 +72,7 @@
 
         </div>
     </section>
-    <section class="section_3">
+    <section class="section_3" id="Work">
         <div class="work_title">
             <div class="page" data-aos="fade-up" data-aos-duration="1500">02-Work</div>
             <p class="recent" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">Recent<br>projects</p>
@@ -79,7 +86,7 @@
             </div>
             <a class="project_img jarallax" href="https://111-03-fcu-spirited.dev-hub.io/" target="_blank" data-jarallax
                 data-speed="0.6">
-                <img class="jarallax-img" src="./img/cruuunchify-cover.jpg" alt="">
+                <img class="jarallax-img" src="./img/1660554222841123213213412.jpg" alt="">
             </a>
 
         </div>
@@ -100,7 +107,7 @@
         </div>
 
     </section>
-    <section class="section_4">
+    <section class="section_4" id="Contact">
         <div class="contact_title">
             <div class="page" data-aos="fade-up" data-aos-duration="1500">03-contact</div>
             <p class="wanna" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">wanna<br>work together?
@@ -110,7 +117,6 @@
         </div>
         <div class="email" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="600">
             <a href="mailto:a0981543866@gmail.com">a0981543866@gmail.com</a>
-            <img src="./img/S__30646316.jpg" alt="">
         </div>
         <div class="footer">
             <a href="https://www.flaticon.com/free-icons/letter-k" title="letter k icons">Letter k icons created by
@@ -127,41 +133,61 @@
 
 
     <script>
-        const project = document.querySelectorAll(".project")
+
+        // project hover效果
+        // const project = document.querySelectorAll(".project")
+        // project.forEach(e => {
+        //     console.log(window.innerWidth);
+        //     (e.children[0]).children[0].addEventListener("mouseenter", (event) => {
+        //         if (window.innerWidth < 1006) {
+        //             (((e.children[1]).children[0]).children[0]).style.width = '110%';
+        //         } else if (window.innerWidth > 1006) {
+        //             (((e.children[1]).children[0]).children[0]).style.width = '60%';
+        //         }
+        //     });
+        //     (e.children[0]).children[0].addEventListener("mouseleave", (event) => {
+        //         if (window.innerWidth < 1006) {
+        //             (((e.children[1]).children[0]).children[0]).style.width = '100%';
+        //         } else if (window.innerWidth > 1006) {
+        //             (((e.children[1]).children[0]).children[0]).style.width = '50%';
+        //         }
+        //     });
+        //     e.children[1].addEventListener("mouseenter", (event) => {
+        //         if (window.innerWidth < 1006) {
+        //             (((e.children[1]).children[0]).children[0]).style.width = '110%';
+        //         } else if (window.innerWidth > 1006) {
+        //             (((e.children[1]).children[0]).children[0]).style.width = '60%';
+        //         }
+        //     });
+        //     e.children[1].addEventListener("mouseleave", (event) => {
+        //         if (window.innerWidth < 1006) {
+        //             (((e.children[1]).children[0]).children[0]).style.width = '100%';
+        //         } else if (window.innerWidth > 1006) {
+        //             (((e.children[1]).children[0]).children[0]).style.width = '50%';
+        //         }
+        //     });
+        // });
+
+        const nav_li = document.querySelectorAll(".nav_li")
 
 
-        project.forEach(e => {
-            console.log(window.innerWidth);
-            (e.children[0]).children[0].addEventListener("mouseenter", (event) => {
-                if (window.innerWidth < 1006) {
-                    (((e.children[1]).children[0]).children[0]).style.width = '110%';
-                } else if (window.innerWidth > 1006) {
-                    (((e.children[1]).children[0]).children[0]).style.width = '60%';
-                }
+        nav_li.forEach(e => {
+           
+            e.addEventListener("mouseenter", (event) => {
+                 console.log(e.children);
+                    e.children[0].style.width = '100%';
+                    e.children[0].style.right = 'auto';
+                    e.children[0].style.left = '0px';
+                
             });
-            (e.children[0]).children[0].addEventListener("mouseleave", (event) => {
-                if (window.innerWidth < 1006) {
-                    (((e.children[1]).children[0]).children[0]).style.width = '100%';
-                } else if (window.innerWidth > 1006) {
-                    (((e.children[1]).children[0]).children[0]).style.width = '50%';
-                }
-            });
-            e.children[1].addEventListener("mouseenter", (event) => {
-                if (window.innerWidth < 1006) {
-                    (((e.children[1]).children[0]).children[0]).style.width = '110%';
-                } else if (window.innerWidth > 1006) {
-                    (((e.children[1]).children[0]).children[0]).style.width = '60%';
-                }
-            });
-            e.children[1].addEventListener("mouseleave", (event) => {
-                if (window.innerWidth < 1006) {
-                    (((e.children[1]).children[0]).children[0]).style.width = '100%';
-                } else if (window.innerWidth > 1006) {
-                    (((e.children[1]).children[0]).children[0]).style.width = '50%';
-                }
+            e.addEventListener("mouseleave", (event) => {
+                 console.log(e.children);
+                    e.children[0].style.width = '0px';
+                    e.children[0].style.right = '0px';
+                    e.children[0].style.left = 'auto';
+                
             });
         });
-
 
 
         // window.addEventListener('scroll', () => {
@@ -178,63 +204,65 @@
         // });
         // const img = document.querySelectorAll('.move');
         document.getElementById("mask").addEventListener("mouseenter", (event) => {
-             
-            
-        
-        if (window.innerWidth > 1005) {
-            dragElement(document.getElementById("mask"));
-            function dragElement(elmnt) {
-                var pos1 = 0, pos3 = 0;
-
-                // otherwise, move the DIV from anywhere inside the DIV:
-                elmnt.onmousedown = dragMouseDown;
 
 
-                function dragMouseDown(e) {
-                    e = e || window.event;
-                    e.preventDefault();
-                    // get the mouse cursor position at startup:
-                    pos3 = e.clientX;
 
-                    document.onmouseup = closeDragElement;
-                    // call a function whenever the cursor moves:
-                    document.onmousemove = elementDrag;
-                }
+            if (window.innerWidth > 1005) {
+                dragElement(document.getElementById("mask"));
+                function dragElement(elmnt) {
+                    var pos1 = 0, pos3 = 0;
 
-                function elementDrag(e) {
-                    e = e || window.event;
-                    e.preventDefault();
-
-                    // calculate the new cursor position:
-                    pos1 = pos3 - e.clientX;
-                    pos3 = e.clientX;
-
-                    var movement = elmnt.offsetLeft;
-                    var screen_width_30 = (3 * window.innerWidth / 10)
+                    // otherwise, move the DIV from anywhere inside the DIV:
+                    elmnt.onmousedown = dragMouseDown;
 
 
-                    if (movement < 50) {
-                        movement = 50
-                    } else if (movement > screen_width_30) {
-                        movement = screen_width_30
-                    } else {
-                        movement = elmnt.offsetLeft;
+                    function dragMouseDown(e) {
+                        e = e || window.event;
+                        e.preventDefault();
+                        // get the mouse cursor position at startup:
+                        pos3 = e.clientX;
+
+                        document.onmouseup = closeDragElement;
+                        // call a function whenever the cursor moves:
+                        document.onmousemove = elementDrag;
                     }
-                    console.log(elmnt.offsetLeft);
-                    // set the element's new position:
-                    elmnt.style.left = (movement - pos1) + "px";
-                    elmnt.style.left >= 0;
-                }
+
+                    function elementDrag(e) {
+                        e = e || window.event;
+                        e.preventDefault();
+
+                        // calculate the new cursor position:
+                        pos1 = pos3 - e.clientX;
+                        pos3 = e.clientX;
+
+                        var movement = elmnt.offsetLeft;
+                        var screen_width_30 = (3 * window.innerWidth / 10)
 
 
-                function closeDragElement() {
-                    // stop moving when mouse button is released:
-                    document.onmouseup = null;
-                    document.onmousemove = null;
+                        if (movement < 50) {
+                            movement = 50
+                        } else if (movement > screen_width_30) {
+                            movement = screen_width_30
+                        } else {
+                            movement = elmnt.offsetLeft;
+                        }
+                        console.log(elmnt.offsetLeft);
+                        // set the element's new position:
+                        elmnt.style.left = (movement - pos1) + "px";
+                        elmnt.style.left >= 0;
+                    }
+
+
+                    function closeDragElement() {
+                        // stop moving when mouse button is released:
+                        document.onmouseup = null;
+                        document.onmousemove = null;
+                    }
                 }
+            } else {
+                console.log(1);
             }
-        }else{console.log(1);   
-        }});
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
