@@ -13,7 +13,15 @@ html {
   z-index: 0;
 }
 .jarallax .jarallax-img {
+  -o-object-position: 50% 20% !important;
+     object-position: 50% 20% !important;
   z-index: -1;
+}
+@media screen and (max-width: 1005px) {
+  .jarallax .jarallax-img {
+    -o-object-position: 50% 10% !important;
+       object-position: 50% 10% !important;
+  }
 }
 
 a {
@@ -297,7 +305,9 @@ body .section_1 .intro_name .intro i {
 body .section_1 .intro_name .intro .intro_1 {
   margin-right: 3%;
   width: 300px;
-  font-size: 22px;
+  font-size: 60px;
+  font-weight: 100;
+  color: rgb(49, 49, 49);
 }
 @media screen and (max-width: 1005px) {
   body .section_1 .intro_name .intro .intro_1 {
@@ -310,6 +320,7 @@ body .section_1 .intro_name .intro .intro_1 {
 }
 @media screen and (max-width: 690px) {
   body .section_1 .intro_name .intro .intro_1 {
+    font-size: 50px;
     width: 300px;
   }
 }
@@ -369,8 +380,6 @@ body .section_2 {
 body .section_2 .page {
   font-size: 32px;
   display: inline-block;
-  position: relative;
-  top: 40px;
 }
 @media screen and (max-width: 1005px) {
   body .section_2 .page {
@@ -379,10 +388,11 @@ body .section_2 .page {
 }
 body .section_2 .about {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   align-items: flex-end;
   width: 100%;
   right: 0px;
+  padding-top: 100px;
 }
 @media screen and (max-width: 1005px) {
   body .section_2 .about {
@@ -391,10 +401,9 @@ body .section_2 .about {
 }
 body .section_2 .about .about_content {
   width: 70%;
-  font-size: 40px;
+  font-size: 32px;
   margin-right: 10%;
-  position: relative;
-  top: 100px;
+  color: rgb(49, 49, 49);
 }
 @media screen and (max-width: 1228px) {
   body .section_2 .about .about_content {
@@ -413,10 +422,12 @@ body .section_2 .about .about_content {
   }
 }
 body .section_2 .about .about_content_1 {
+  width: 70%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   align-items: flex-start;
   justify-content: space-between;
+  margin-right: 10%;
 }
 @media screen and (max-width: 1005px) {
   body .section_2 .about .about_content_1 {
@@ -424,16 +435,19 @@ body .section_2 .about .about_content_1 {
   }
 }
 body .section_2 .about .about_content_1 .about_psnlty {
-  width: 20%;
+  width: 450px;
   font-size: 22px;
-  margin-left: 20%;
-  margin-top: 120px;
+  font-weight: 100;
+  margin-top: 70px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 @media screen and (max-width: 1005px) {
   body .section_2 .about .about_content_1 .about_psnlty {
     font-size: 20px;
-    margin-left: 0%;
-    width: 80%;
+    justify-content: flex-start;
+    width: 100%;
   }
 }
 @media screen and (max-width: 690px) {
@@ -441,11 +455,15 @@ body .section_2 .about .about_content_1 .about_psnlty {
     font-size: 18px;
   }
 }
+body .section_2 .about .about_content_1 .about_psnlty span {
+  margin: 0px 5px 0px 5px;
+}
 body .section_2 .about .about_content_1 .about_dsc {
   width: 40%;
   font-size: 22px;
   margin-top: 120px;
   margin-right: 5%;
+  color: rgb(49, 49, 49);
 }
 @media screen and (max-width: 1005px) {
   body .section_2 .about .about_content_1 .about_dsc {
@@ -595,7 +613,6 @@ body .section_3 .project .project_info .project_name .project_dcr {
 }
 body .section_3 .project .project_img {
   width: 50%;
-  height: 1080px;
   transition: 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 @media screen and (max-width: 1005px) {
@@ -687,11 +704,21 @@ body .section_4 .email a {
 }
 body .section_4 .footer {
   width: 100%;
-  height: 240px;
+  height: 100px;
   padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+@media screen and (max-width: 1380px) {
+  body .section_4 .footer {
+    height: 140px;
+  }
+}
+@media screen and (max-width: 1228px) {
+  body .section_4 .footer {
+    height: 240px;
+  }
 }
 body .section_4 .footer a {
   width: 50%;
